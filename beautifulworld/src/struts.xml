@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<constant name="struts.ui.theme" value="simple"/>
+<constant name="struts.devMode" value="true" />
+
+
+<package name="com.internousdev.beautifulworlds.action" extends="struts-default">
+
+<action name="HomeAction" class="com.internousdev.beautifulworlds.action.HomeAction"
+method = "execute">
+<result name ="success">home.jsp</result>
+</action>
+<action name="ProductListAction" class="com.internousdev.beautifulworlds.action.ProductListAction"
+method = "execute">
+<result name ="success">itemList.jsp</result>
+</action>
+
+<action name="SerchItemAction" class="com.internousdev.beautifulworlds.action.SerchItemAction"
+method = "execute">
+<result name ="success">itemList.jsp</result>
+<result name ="error">itemList.jsp</result>
+</action>
+
+<action name="ProductDetailsAction" class="com.internousdev.beautifulworlds.action.ProductDetailsAction" method="execute">
+<result name="success">itemDetails.jsp</result>
+<result name="error">itemList.jsp</result>
+</action>
+
+<action name="StaffSelectAction" class="com.internousdev.beautifulworlds.action.StaffSelectAction" method="execute">
+<result name="success">pickUpStaff.jsp</result>
+</action>
+
+<action name="ReservationListAction" class="com.internousdev.beautifulworlds.action.ReservationListAction" method="execute">
+<result name="success">reservationList.jsp</result>
+</action>
+<action name="ReserveConfirmAction" class="com.internousdev.beautifulworlds.action.ReserveConfirmAction" method="execute">
+<result name="success">reserveConfirm.jsp</result>
+<result name="error">reservationList.jsp</result>
+</action>
+<action name="ReserveCompleteAction" class="com.internousdev.beautifulworlds.action.ReserveCompleteAction" method="execute">
+<result name="success">reserveComplete.jsp</result>
+</action>
+<action name="GoLoginAction" class="com.internousdev.beautifulworlds.action.GoLoginAction" method="execute">
+<result name="success">login.jsp</result>
+</action>
+<action name="LoginAction" class="com.internousdev.beautifulworlds.action.LoginAction" method="execute">
+<result name="success">index.jsp</result>
+<result name="cart">cart.jsp</result>
+<result name="error">login.jsp</result>
+</action>
+<action name="AddCartAction" class="com.internousdev.beautifulworlds.action.AddCartAction" method="execute">
+<result name="success">cart.jsp</result>
+<result name="error">index.jsp</result>
+</action>
+<action name="LogoutAction" class="com.internousdev.beautifulworlds.action.LogoutAction" method="execute">
+<result name="success">index.jsp</result>
+</action>
+<action name="GoStaffColumAction" class="com.internousdev.beautifulworlds.action.GoStaffColumAction" method="execute">
+<result name="success">columList.jsp</result>
+</action>
+<action name="StylingListAction" class="com.internousdev.beautifulworlds.action.StylingListAction" method="execute">
+<result name="success">stylingList.jsp</result>
+</action>
+
+
+
+
+
+
+</package>
+</struts>
