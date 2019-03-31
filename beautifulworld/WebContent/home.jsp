@@ -88,6 +88,16 @@ $(function(){
 	        	<div class="salonInfo">
 	        		<div class="titleBar">SalonInfo</div>
 	        		<img src="./images/map.png" class="mapimg">
+	        		<div class = "address">
+		        		〒105-0001<br>
+		        		東京都港区虎ノ門４丁目３−１ 城山トラストタワー31F<br>
+		        		tel:03-6205-7707<br>
+						fax:03-6205-7708<br><br>
+						営業時間：<br>
+						月・木／土日祝日 10:00～19:00<br>
+						水・金 13:00～22:00<br><br>
+						定休日：毎週火曜日<br>
+					</div>
 	        	</div>
 
 
