@@ -699,6 +699,7 @@ figure:hover img {
 }
 .homeMenu{
 	height:300px;
+	margin-top:50px;
 }
 
 
@@ -725,7 +726,7 @@ figure:hover img {
   max-width: 900px;
   min-height: 450px;
   max-height: 450px;
-  margin: 30px auto;
+  margin: 20px auto;
 /*   border-right:5px solid black; */
 /*   border-left:5px solid black; */
 /*   border-top:2px solid black; */
@@ -804,11 +805,11 @@ box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.8);
 }
 .mapimg{
 	width:205px;
-	margin-top:10px;
+	margin-top:11px;
 	margin-left:1px;
 }
 .address{
 	font-size:13px;
-	margin-top:5px;
+	margin-top:6px;
 	margin-bottom:20px;
 }
