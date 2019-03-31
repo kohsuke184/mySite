@@ -674,12 +674,28 @@ figure:hover img {
 	object-fit: cover;
 }
 .desc{
-	font-size:10px;
+	font-size:12px;
 }
 .newsBox{
 	float:left;
 	width:25%;
-	height:200px;
+	height:350px;
+	border-bottom:1px solid black;
+}
+.newsBox .gray{
+	margin:0;
+}
+.newsTitle{
+	font-size:20px;
+	border-top:1px solid black;
+	border-bottom:1px solid black;
+	padding-top:3px;
+	padding-bottom:3px;
+	text-align:center;
+}
+.newsInfo{
+	margin-bottom:15px;
+	margin-top:10px;
 }
 .homeMenu{
 	height:300px;

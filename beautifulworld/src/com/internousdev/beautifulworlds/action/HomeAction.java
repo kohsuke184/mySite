@@ -6,7 +6,9 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.internousdev.beautifulworlds.dao.NewsInfoDAO;
 import com.internousdev.beautifulworlds.dao.StaffColumDAO;
+import com.internousdev.beautifulworlds.dto.NewsInfoDTO;
 import com.internousdev.beautifulworlds.dto.StaffColumDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -17,14 +19,17 @@ public class HomeAction extends ActionSupport implements SessionAware{
 
 	private Map<String, Object> session;
 	private StaffColumDAO staffColumDao = new StaffColumDAO();
+	private NewsInfoDAO newsInfoDao = new NewsInfoDAO();
 	private List<StaffColumDTO> staffColumDtoList = new ArrayList<StaffColumDTO>();
 	private List<StaffColumDTO> subStaffColumDtoList = new ArrayList<StaffColumDTO>();
+	private List<NewsInfoDTO> newsInfoDtoList = new ArrayList<NewsInfoDTO>();
 	public String execute() {
 		if(!session.containsKey("logined")) {
 			session.put("logined", 0);
 		}
 		staffColumDtoList = staffColumDao.getColumList();
 		subStaffColumDtoList = staffColumDtoList.subList(0, 3);
+		newsInfoDtoList = newsInfoDao.GetNewsInfo();
 		return SUCCESS;
 	}
 }

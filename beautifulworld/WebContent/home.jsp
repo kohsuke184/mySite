@@ -44,7 +44,15 @@ $(function(){
 		</div>
 
         	<div class="homeMenu">
-        		<div class="newsBox"></div>
+        		<div class="newsBox">
+        			<div class="newsTitle">News</div>
+	        			<s:iterator value="newsInfoDtoList">
+		        			<div class="newsInfo">
+		        				<span class="gray"><s:property value = "updateDate"/></span><br>
+		        				<span class="desc"><s:property value = "newsTitle"/></span><br>
+							</div>
+	        			</s:iterator>
+        		</div>
 				<s:iterator value="subStaffColumDtoList">
 					<div class="subColum">
 						<img src="<s:property value="columImageFilePath"/>/<s:property value="columImageFileName"/>" class="columImg"/>
