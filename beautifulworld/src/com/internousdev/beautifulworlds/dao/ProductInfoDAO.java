@@ -50,6 +50,44 @@ public class ProductInfoDAO {
 		return productInfoDtoList;
 	}
 
+	public List<ProductInfoDTO> getProductInfoListByRandom() {
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+		List<ProductInfoDTO> productInfoDtoList = new ArrayList<ProductInfoDTO>();
+		String sql = "select * from product_info ORDER BY RAND() LIMIT 2;";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				ProductInfoDTO productInfoDto = new ProductInfoDTO();
+				productInfoDto.setId(resultSet.getInt("id"));
+				productInfoDto.setProductId(resultSet.getInt("product_id"));
+				productInfoDto.setProductName(resultSet.getString("product_name"));
+				productInfoDto.setProductNameKana(resultSet.getString("product_name_kana"));
+				productInfoDto.setProductDescription(resultSet.getString("product_description"));
+				productInfoDto.setCategoryId(resultSet.getInt("category_id"));
+				productInfoDto.setPrice(resultSet.getInt("price"));
+				productInfoDto.setImageFilePath(resultSet.getString("image_file_path"));
+				productInfoDto.setImageFileName(resultSet.getString("image_file_name"));
+				productInfoDto.setReleaseDate(resultSet.getDate("release_date"));
+				productInfoDto.setReleaseCompany(resultSet.getString("release_company"));
+				productInfoDto.setStatus(resultSet.getInt("status"));
+				productInfoDto.setUpdateDate(resultSet.getDate("regist_date"));
+				productInfoDto.setUpdateDate(resultSet.getDate("update_date"));
+				productInfoDtoList.add(productInfoDto);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		try {
+			connection.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return productInfoDtoList;
+	}
+
 	public ProductInfoDTO getProductInfo(int productId) {
 		DBConnector dbConnector = new DBConnector();
 		Connection connection = dbConnector.getConnection();

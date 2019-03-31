@@ -32,6 +32,7 @@ public class StylingListDAO{
 				stylingListDto.setStyleDescription(rs.getString("style_description"));
 				stylingListDto.setStylePopularYear(rs.getString("style_popular_year"));
 				stylingListDto.setStaffId(rs.getInt("info.staff_id"));
+				stylingListDto.setStaffName(rs.getString("info.staff_name"));
 				stylingListDto.setImageFilePath(rs.getString("style.image_file_path"));
 				stylingListDto.setImageFileName(rs.getString("style.image_file_name"));
 				stylingListDto.setUpdateDate(rs.getDate("style.update_date"));

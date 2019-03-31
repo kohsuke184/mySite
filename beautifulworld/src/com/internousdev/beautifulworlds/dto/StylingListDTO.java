@@ -12,7 +12,7 @@ public class StylingListDTO {
 	private String styleDescription;
 	private String stylePopularYear;
 	private int staffId;
-	private String staffNama;
+	private String staffName;
 	private String staffNameKana;
 	private String imageFilePath;
 	private String imageFileName;

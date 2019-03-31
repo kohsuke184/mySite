@@ -45,7 +45,7 @@ $(function(){
 
         	<div class="homeMenu">
         		<div class="newsBox">
-        			<div class="newsTitle">News</div>
+        			<div class="titleBar">News</div>
 	        			<s:iterator value="newsInfoDtoList">
 		        			<div class="newsInfo">
 		        				<span class="gray"><s:property value = "updateDate"/></span><br>
@@ -64,6 +64,33 @@ $(function(){
 							</div>
 					</div>
 				</s:iterator>
+	        </div>
+	        <div class="middleMenu">
+	        	<div class="styleMenu">
+					<div class="titleBar">Styling</div>
+					<s:iterator value="stylinListDtoList">
+						<img src="<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>" class="hairImg"/>
+					<div class="titleBar">
+						<div class="styleDate"><s:property value="updateDate"/></div>
+						<div class="styleBy"><s:property value="staffName"/></div>
+					</div>
+					</s:iterator>
+	        	</div>
+	        	<div class="itemMenu">
+	        		<div class="titleBar">Items</div>
+	        		<div class="itemImage">
+	        			<s:iterator value="productInfoDtoList">
+	        				<img src="<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>" class="itemPic"/>
+	        			</s:iterator>
+	        		</div>
+
+	        	</div>
+	        	<div class="salonInfo">
+	        		<div class="titleBar">SalonInfo</div>
+	        		<img src="./images/map.png" class="mapimg">
+	        	</div>
+
+
 	        </div>
 		</div>
 
