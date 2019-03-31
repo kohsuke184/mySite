@@ -66,16 +66,16 @@
 
       			<ul>
       				<li><a href="<s:url action='SerchItemAction'>
-      				<s:param name='categoryId' value='1'/><s:param name='keywords' value='%{keywords}'/></s:url> ">ALL</a></li>
+      				<s:param name='categoryId' value='1'/></s:url> ">ALL</a></li>
       				<li>Shop</li>
       				<li><a href="<s:url action='SerchItemAction'>
-      				<s:param name='categoryId' value='2'/><s:param name='keywords' value='%{keywords}'/></s:url> ">Hair</a></li>
+      				<s:param name='categoryId' value='2'/></s:url> ">Hair</a></li>
       				<li><a href="<s:url action='SerchItemAction'>
-      				<s:param name='categoryId' value='3'/><s:param name='keywords' value='%{keywords}'/></s:url> ">Make</a></li>
+      				<s:param name='categoryId' value='3'/></s:url> ">Make</a></li>
       				<li><a href="<s:url action='SerchItemAction'>
-      				<s:param name='categoryId' value='4'/><s:param name='keywords' value='%{keywords}'/></s:url> ">Books</a></li>
+      				<s:param name='categoryId' value='4'/></s:url> ">Books</a></li>
       				<li><a href="<s:url action='SerchItemAction'>
-      				<s:param name='categoryId' value='5'/><s:param name='keywords' value='%{keywords}'/></s:url> ">other</a></li>
+      				<s:param name='categoryId' value='5'/></s:url> ">other</a></li>
 
       			</ul>
 

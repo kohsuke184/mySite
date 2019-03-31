@@ -77,10 +77,18 @@ $(function(){
 					</s:iterator>
 	        	</div>
 	        	<div class="itemMenu">
-	        		<div class="titleBar">Items</div>
+	        		<a href="<s:url action='SerchItemAction'>
+      				<s:param name='categoryId' value='1'/></s:url> ">
+      					<div class="titleBar">Items</div>
+      				</a>
+
 	        		<div class="itemImage">
 	        			<s:iterator value="productInfoDtoList">
-	        				<img src="<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>" class="itemPic"/>
+	        				<a href='<s:url action="ProductDetailsAction">
+								<s:param name="productId" value="%{productId}"/>
+								</s:url>'><img src="<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>" class="itemPic"/>
+							</a>
+
 	        			</s:iterator>
 	        		</div>
 
