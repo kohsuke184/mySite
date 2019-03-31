@@ -267,3 +267,56 @@ insert into staff_info values
 (5,5,"Morten Lowe","モーテン ロウ","ディレクター","シャギーカット","","./images","staff5.jpg",now()),
 (6,6,"sergey tatarenko","セルゲイ タタレンコ","店長","ボブカット","","./images","staff6.jpg",now());
 
+
+create table news_table(
+id int primary key not null auto_increment comment "ID",
+news_id int not null comment "ニュースID",
+news_title varchar(32) not null comment "ニュースタイトル",
+news_description varchar(1023) comment "ニュース文章",
+update_date datetime comment "更新日"
+)
+default charset=utf8
+comment="スタッフコラム"
+;
+
+insert into news_table values
+(1,1,"新卒・中途採用募集致します！！",
+"＊＊募集スタッフ＊＊
+
+新卒・中途アシスタント 【研修期間あり 】
+
+＊＊詳細＊＊
+
+基本給　　　165,000円〜195,000円（技術昇給あり）
+交通費　　　全額支給
+　　　　　　福利厚生　　厚生年金　雇用保険　労災保険　健康保険　
+　　　　　　
+定休日　　　毎週火曜日と公休3日
+　　　　　　【アシスタント】 有休年間 7日【スタイリスト】有休年間 10日 慶弔休暇　 結婚休暇　年末年始休暇　
+　　　　
+※ご応募の際は、下記まで履歴書をお送りください。
+
+＞＞履歴書の送付先＜＜
+○○○-○○○○
+○○県○○市○○○区○○-○○○○-○○",
+"2018-09-30"),
+(2,2,"この度、新ネット予約サービスを開始致しました。
+
+以前からもネット予約サービスをさせて頂きましたが
+
+より、お客様に快適にお使い頂けるよう
+
+新たな導入に至りました。
+
+トップページを下にスクロールして頂きますと
+
+予約サービスへのアイコンがございます。
+
+そちらからご登録、予約画面へと切り替わります。
+
+ご不明な点などございましたらお気軽にTIECHELにて
+
+お問い合わせ下さい。",
+"2018-04-03")
+;
+
