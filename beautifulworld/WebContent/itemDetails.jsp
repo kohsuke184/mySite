@@ -12,9 +12,7 @@
 <body>
 <jsp:include page="header.jsp" />
 <div id="main">
-<div class="yohaku">
 
-      </div>
 
       	<div class="leftmenu">
 	      	<s:form method="get" action="AddCartAction" name="addcart">
@@ -101,16 +99,14 @@
 
 					<div class="product-details-recomｍend-box">
 					<s:iterator value="productInfoDtoList">
-						<div class="product-list">
-							<div class="product-list-box">
+
 							<div class="recommend-box">
-							<a href='<s:url action="ProductDetailsAction">
-							<s:param name="productId" value="%{productId}"/>
-							</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-100"/></a>
-							<s:property value="productName"/><br>
+								<a href='<s:url action="ProductDetailsAction">
+								<s:param name="productId" value="%{productId}"/>
+								</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' width="150px"/></a>
+								<br><s:property value="productName"/>
 							</div>
-							</div>
-						</div>
+
 
 					</s:iterator>
 					</div>

@@ -36,8 +36,7 @@ $(function(){
 <body>
 <jsp:include page="header.jsp" />
 <div id="main">
-<div class="yohaku">
-      </div>
+
       <div class="maincontainer">
 		<div id="content">
 		  <div id="mainvisual"></div>

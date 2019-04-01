@@ -13,9 +13,7 @@
 <body>
 <jsp:include page="header.jsp" />
 <div id="main">
-<div class="yohaku">
 
-      </div>
       <div class="staffcontainer">
 
 
