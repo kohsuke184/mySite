@@ -66,6 +66,9 @@ method = "execute">
 <action name="StylingListAction" class="com.internousdev.beautifulworlds.action.StylingListAction" method="execute">
 <result name="success">stylingList.jsp</result>
 </action>
+<action name="StaffColumDetailsAction" class="com.internousdev.beautifulworlds.action.StaffColumDetailsAction" method="execute">
+<result name="success">columDetail.jsp</result>
+</action>
 
 
 

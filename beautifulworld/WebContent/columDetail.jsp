@@ -17,8 +17,13 @@
 
 
 		<div class="leftmenu staff">
-
-			<s:iterator value="staffColumDtoList">
+			<div class="staffDetail">
+				<img src="<s:property value="staffImageFilePath"/>/<s:property value="staffImageFileName"/>" width="200px"  class="center"/>
+				<span class="gray"><s:property value ="position"/></span><br>
+				<s:property value ="staffName"/><br>
+				<s:property value ="staffPr"/><br>
+			</div>
+			<div class="columDetail">
 				<div class="columBox">
 					<div class="title_bar">
 						<span class="gray"><s:property value="updateDate" /></span>
@@ -26,29 +31,17 @@
 					</div>
 
 					<div id="columpic">
-							<a href="<s:url action='StaffColumDetailsAction'>
-      							<s:param name='columId' value='columId'/></s:url> ">
-      							<img src="<s:property value="columImageFilePath"/>/<s:property value="columImageFileName"/>" width="200px"/>
-      						</a>
+      							<img src="<s:property value="columImageFilePath"/>/<s:property value="columImageFileName"/>" width="540px"/>
 					</div>
-					<div class="columPackage">
+					<div class="columDetailPackage">
 						<div class="columDescription">
-							<s:property value="editedColumDescription" />
+							<s:property value="columDescription" />
 						</div>
 					</div>
-					<div class="staffSpace">
-						<div class="staffImagePic">
-							<img
-								src="<s:property value ="staffImageFilePath"/>/<s:property value ="staffImageFileName"/>"
-								height="50px" />
-						</div>
-						<div class="staffInfo">
-							<span class="gray"><s:property value="position" /></span><br>
-							<s:property value="staffName" />
-						</div>
-					</div>
+
 				</div>
-			</s:iterator>
+			</div>
+
 
 		</div>
 		<div class="rightmenu staff">

@@ -54,7 +54,10 @@ $(function(){
         		</div>
 				<s:iterator value="subStaffColumDtoList">
 					<div class="subColum">
-						<img src="<s:property value="columImageFilePath"/>/<s:property value="columImageFileName"/>" class="columImg"/>
+							<a href="<s:url action='StaffColumDetailsAction'>
+      							<s:param name='columId' value='columId'/></s:url> ">
+      							<img src="<s:property value="columImageFilePath"/>/<s:property value="columImageFileName"/>" class="columImg"/>
+      						</a>
 							<span><s:property value="columTitle" /></span><br>
 							<span class="desc"><s:property value="shortEditedColumDescription" /></span>
 							<div class="columBottom">

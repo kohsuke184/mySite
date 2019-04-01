@@ -1,9 +1,13 @@
 package com.internousdev.beautifulworlds.action;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import com.internousdev.beautifulworlds.dao.StaffColumDAO;
+import com.internousdev.beautifulworlds.dao.StaffInfoDAO;
 import com.internousdev.beautifulworlds.dto.StaffColumDTO;
+import com.internousdev.beautifulworlds.dto.StaffInfoDTO;
 import com.opensymphony.xwork2.ActionSupport;
 
 import lombok.Getter;
@@ -13,6 +17,9 @@ import lombok.Setter;
 public class StaffColumDetailsAction extends ActionSupport {
 
 	private StaffColumDAO staffColumDao = new StaffColumDAO();
+	private StaffInfoDAO staffInfoDao = new StaffInfoDAO();
+	private List<StaffInfoDTO> staffInfoDtoList = new ArrayList<StaffInfoDTO>();
+
 	private int columId;
 	private String columTitle;
 	private String columDescription;
@@ -28,6 +35,7 @@ public class StaffColumDetailsAction extends ActionSupport {
 	private Date updateDate;
 
 	public String execute() {
+		staffInfoDtoList = staffInfoDao.selectStaffInfo();
 		StaffColumDTO staffColumDto = staffColumDao.getColum(columId);
 		columId = staffColumDto.getColumId();
 		columTitle = staffColumDto.getColumTitle();
