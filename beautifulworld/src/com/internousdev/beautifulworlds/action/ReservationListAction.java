@@ -29,6 +29,16 @@ public class ReservationListAction extends ActionSupport  implements SessionAwar
 		ReserveDAO dao = new ReserveDAO();
 		reservationList = dao.selectAllReservation(staffId);
 		session.put("reservationList", reservationList);
+		if(!session.containsKey("calendarList")){
+			SetCalender();
+		}
+		if(!session.containsKey("timeList")){
+			SetTimeList();
+		}
+		return SUCCESS;
+	}
+
+	public void SetCalender(){
 		String dayOfWeek;
 		for(int i = 0;i<7;i++){
 			int day=cal.get(Calendar.DATE);
@@ -55,12 +65,11 @@ public class ReservationListAction extends ActionSupport  implements SessionAwar
 			calendardto.setMonth(month);
 			calendardto.setDayOfWeek(dayOfWeek);
 			calendarList.add(calendardto);
-			System.out.println(month +"月"+day+"日"  + dayOfWeek);
 			cal.add(Calendar.DAY_OF_MONTH, 1);
+			session.put("calendarList", calendarList);
 		}
-		if(!session.containsKey("calendarList")){
-		session.put("calendarList", calendarList);
-		}
+	}
+	public void SetTimeList(){
 		cal.set(Calendar.HOUR_OF_DAY, 10);
 		cal.set(Calendar.MINUTE, 00);
 		for(int i=0;i<24;i++){
@@ -79,10 +88,7 @@ public class ReservationListAction extends ActionSupport  implements SessionAwar
 			timeList.add(timedto);
 			cal.add(Calendar.MINUTE,30);
 			System.out.println(hour + "時"+minute+"分");
-		}
-		if(!session.containsKey("timeList")){
 			session.put("timeList", timeList);
-			}
-		return SUCCESS;
+		}
 	}
 }
