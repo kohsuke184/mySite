@@ -20,7 +20,6 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 	private String imageFilePath;
 	private String imageFileName;
 	private int price;
-
 	private String categoryId;
 	private String keywords;
 	private List<MCategoryDTO> mCategoryDtoList = new ArrayList<MCategoryDTO>();
@@ -45,7 +44,6 @@ public class ProductListAction extends ActionSupport implements SessionAware{
 		session.put("hasPreviousPage", paginationDTO.isHasPreviousPage());
 		session.put("nextPageNo", paginationDTO.getNextPageNo());
 		session.put("previousPageNo", paginationDTO.getPreviousPageNo());
-
 
 		result = SUCCESS;
 		return result;
