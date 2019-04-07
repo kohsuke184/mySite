@@ -46,8 +46,6 @@
 	      	</div>
 	      	</s:if>
 
-
-
 			<table  cellspacing="0"  class="time-table-list">
 					<tr>
 						<td>日時</td>
