@@ -42,7 +42,7 @@ ul{
 	height:170px;
 	margin:0 auto;
 }
-@media screen and (min-width:1240px) and ( max-width:1500px) {
+@media screen and (min-width:1240px){
 	#header{
 	width:100%;
 	margin:0 auto;
@@ -56,20 +56,7 @@ ul{
 /* 	} */
 
 }
-@media screen and (min-width:1500px) and {
-	#header{
-	width:100%;
-	margin:0 auto;
-	}
-/* 	#main{ */
-/* 	width:100%; */
-/* 	margin:0 auto; */
-/* 	} */
-/* 	#product-list .pic { */
-/* 	  height: 210px; */
-/* 	} */
 
-}
 
 .maincontainer{
   margin: 0px auto;
